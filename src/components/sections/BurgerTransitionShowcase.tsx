@@ -6,6 +6,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { burgers, Burger } from "@/lib/data/burgers";
 import { useCart } from "@/lib/cart-context";
 import { BurgerCustomizerModal } from "./BurgerCustomizerModal";
+import { asset } from "@/lib/assets";
 
 interface Particle {
   x: number;
@@ -233,7 +234,7 @@ export function BurgerTransitionShowcase() {
               }`}
             >
               <Image
-                src={currentBurger.image}
+                src={asset(currentBurger.image)}
                 alt={currentBurger.name}
                 fill
                 priority

@@ -4,8 +4,9 @@ import React, { useState } from "react";
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import { burgers, Burger } from "@/lib/data/burgers";
-import { useCart } from "@/lib/cart-context";
 import { BurgerCustomizerModal } from "./BurgerCustomizerModal";
+import { useCart } from "@/lib/cart-context";
+import { asset } from "@/lib/assets";
 
 export function BurgersShowcase() {
   const [selectedFilter, setSelectedFilter] = useState<"all" | "featured" | "luxury" | "spicy">("all");
@@ -112,7 +113,7 @@ export function BurgersShowcase() {
                   <div className="absolute inset-0 bg-gradient-to-t from-accent/10 to-transparent rounded-full blur-2xl group-hover:scale-110 transition-transform duration-500" />
                   <div className="relative w-full h-full p-2 group-hover:scale-105 transition-transform duration-500 ease-out-expo">
                     <Image
-                      src={burger.image}
+                      src={asset(burger.image)}
                       alt={burger.name}
                       fill
                       className="object-contain filter drop-shadow-[0_15px_30px_rgba(0,0,0,0.7)]"

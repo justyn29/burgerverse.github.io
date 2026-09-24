@@ -5,6 +5,7 @@ import Image from "next/image";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { combos, Combo } from "@/lib/data/combos";
 import { useCart } from "@/lib/cart-context";
+import { asset } from "@/lib/assets";
 
 export function CombosShowcase() {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -99,7 +100,7 @@ export function CombosShowcase() {
               >
                 <div className="relative w-48 h-56 sm:w-56 sm:h-64 rounded-2xl overflow-hidden bg-black/40 border border-white/10 group-hover:border-[#FF9D00]/40 transition-all duration-500 shadow-xl">
                   <Image
-                    src="/combos/craft-shake.jpg"
+                    src={asset("/combos/craft-shake.jpg")}
                     alt="Dark Bourbon Vanilla Shake"
                     fill
                     className="object-cover group-hover:scale-105 transition-transform duration-500"
@@ -122,7 +123,7 @@ export function CombosShowcase() {
               >
                 <div className="relative w-56 h-64 sm:w-64 sm:h-72 rounded-2xl overflow-hidden bg-black/40 border-2 border-[#FF9D00]/50 group-hover:border-[#FF9D00] transition-all duration-500 shadow-glow">
                   <Image
-                    src="/burgers/ultimate-prime.png"
+                    src={asset("/burgers/ultimate-prime.png")}
                     alt="Ultimate Prime Wagyu"
                     fill
                     className="object-contain p-4 group-hover:scale-110 transition-transform duration-500"
@@ -150,7 +151,7 @@ export function CombosShowcase() {
               >
                 <div className="relative w-48 h-56 sm:w-56 sm:h-64 rounded-2xl overflow-hidden bg-black/40 border border-white/10 group-hover:border-[#FF9D00]/40 transition-all duration-500 shadow-xl">
                   <Image
-                    src="/combos/truffle-fries.jpg"
+                    src={asset("/combos/truffle-fries.jpg")}
                     alt="Hand-Cut Truffle Fries"
                     fill
                     className="object-cover group-hover:scale-105 transition-transform duration-500"

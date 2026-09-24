@@ -5,6 +5,7 @@ import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import { Burger } from "@/lib/data/burgers";
 import { useCart, CartCustomization } from "@/lib/cart-context";
+import { asset } from "@/lib/assets";
 
 interface Props {
   burger: Burger | null;
@@ -87,7 +88,7 @@ export function BurgerCustomizerModal({ burger, isOpen, onClose }: Props) {
               <div className="flex items-center gap-4">
                 <div className="relative w-16 h-16 rounded-2xl bg-surface-elevated overflow-hidden border border-white/10 flex-shrink-0">
                   <Image
-                    src={burger.image}
+                    src={asset(burger.image)}
                     alt={burger.name}
                     fill
                     className="object-contain p-1"

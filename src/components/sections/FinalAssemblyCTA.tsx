@@ -5,6 +5,7 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 import { useCart } from "@/lib/cart-context";
 import { burgers } from "@/lib/data/burgers";
+import { asset } from "@/lib/assets";
 
 export function FinalAssemblyCTA() {
   const { addItem } = useCart();
@@ -72,7 +73,7 @@ export function FinalAssemblyCTA() {
                   className="relative w-full h-full"
                 >
                   <Image
-                    src="/burgers/ultimate-prime.png"
+                    src={asset("/burgers/ultimate-prime.png")}
                     alt="Sovereign Ultimate Prime"
                     fill
                     className="object-contain filter drop-shadow-[0_25px_50px_rgba(0,0,0,0.9)]"

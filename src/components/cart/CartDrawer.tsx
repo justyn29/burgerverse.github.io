@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import { useCart } from "@/lib/cart-context";
+import { asset } from "@/lib/assets";
 
 export function CartDrawer() {
   const {
@@ -174,7 +175,7 @@ export function CartDrawer() {
                         <div className="flex items-center gap-3">
                           <div className="relative w-12 h-12 rounded-xl bg-surface-elevated flex-shrink-0 border border-white/5 overflow-hidden">
                             <Image
-                              src={item.image}
+                              src={asset(item.image)}
                               alt={item.title}
                               fill
                               className="object-contain p-1"

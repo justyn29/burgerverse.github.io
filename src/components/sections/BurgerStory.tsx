@@ -3,6 +3,7 @@
 import React, { useRef } from "react";
 import Image from "next/image";
 import { motion, useScroll, useTransform } from "framer-motion";
+import { asset } from "@/lib/assets";
 
 interface StoryPillar {
   number: string;
@@ -98,13 +99,13 @@ export function BurgerStory() {
 
         {/* Ambient floating ingredient fragments */}
         <div className="absolute top-[10%] left-[8%] w-48 h-48 opacity-25 filter blur-[2px] animate-float">
-          <Image src="/layers/lettuce.jpg" alt="" fill className="object-contain" />
+          <Image src={asset("/layers/lettuce.jpg")} alt="" fill className="object-contain" />
         </div>
         <div className="absolute top-[45%] right-[5%] w-56 h-56 opacity-20 filter blur-[2px] animate-float" style={{ animationDelay: "2s" }}>
-          <Image src="/layers/tomato.jpg" alt="" fill className="object-contain" />
+          <Image src={asset("/layers/tomato.jpg")} alt="" fill className="object-contain" />
         </div>
         <div className="absolute top-[75%] left-[5%] w-60 h-60 opacity-20 filter blur-[2px] animate-float" style={{ animationDelay: "4s" }}>
-          <Image src="/layers/onion.jpg" alt="" fill className="object-contain" />
+          <Image src={asset("/layers/onion.jpg")} alt="" fill className="object-contain" />
         </div>
       </motion.div>
 
@@ -158,7 +159,7 @@ export function BurgerStory() {
 
                 <div className="relative w-full h-56 sm:h-64 rounded-2xl overflow-hidden bg-black/40 border border-white/5 group-hover:border-white/20 transition-all duration-500">
                   <Image
-                    src={pillar.image}
+                    src={asset(pillar.image)}
                     alt={pillar.title}
                     fill
                     className="object-cover group-hover:scale-105 transition-transform duration-700 ease-out"

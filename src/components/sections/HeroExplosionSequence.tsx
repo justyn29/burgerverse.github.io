@@ -10,6 +10,7 @@ import { useCart } from "@/lib/cart-context";
 import { burgers } from "@/lib/data/burgers";
 import { useScroll } from "@/components/layout/ScrollProvider";
 import { BurgerCustomizerModal } from "./BurgerCustomizerModal";
+import { asset } from "@/lib/assets";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -428,7 +429,7 @@ export function HeroExplosionSequence() {
             >
               <div className="relative w-full h-full">
                 <Image
-                  src={layer.image}
+                  src={asset(layer.image)}
                   alt={layer.name}
                   fill
                   sizes="(max-width: 768px) 360px, 500px"

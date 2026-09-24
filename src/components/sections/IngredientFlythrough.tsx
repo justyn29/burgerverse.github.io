@@ -5,6 +5,8 @@ import * as THREE from "three";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
+import { asset } from "@/lib/assets";
+
 gsap.registerPlugin(ScrollTrigger);
 
 interface FlythroughIngredient {
@@ -176,7 +178,8 @@ export function IngredientFlythrough() {
     const planeMeshes: THREE.Mesh[] = [];
 
     FLYTHROUGH_INGREDIENTS.forEach((item) => {
-      const texture = textureLoader.load(item.texturePath);
+      const textureUrl = asset(item.texturePath);
+      const texture = textureLoader.load(textureUrl);
       texture.colorSpace = THREE.SRGBColorSpace;
 
       const geometry = new THREE.PlaneGeometry(item.scale[0], item.scale[1]);
